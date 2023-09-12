@@ -13,3 +13,10 @@ head(gapminder)
 gapminder_clean <- gapminder %>% 
   rename(life_exp = lifeExp, gdp_per_cap = gdpPercap) %>% 
   mutate(gdp = pop * gdp_per_cap)
+
+
+# Explore the data --------------------------------------------------------
+
+table(gapminder_clean$continent)
+
+americas <- gapminder_clean[gapminder_clean$continent == "Americas",]
